@@ -1,0 +1,241 @@
+/* style.css - Tema Al Umanaa & Ngaji Literasi */
+:root {
+    --color-bg: #FCF9F2; /* Warm Ivory Canvas */
+    --color-honey: #FFB800; /* Kuning Lebah Al Umanaa */
+    --color-honey-dark: #D97706; 
+    --color-charcoal: #111418; /* Hitam Arang */
+    --color-muted: #52525B;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--color-bg);
+    /* 1. POLA SARANG LEBAH (HONEYCOMB) SEAMLESS & TIPIS */
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='103.92' viewBox='0 0 60 103.92' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffb800' fill-opacity='0.04'%3E%3Cpath d='M30 103.92L0 86.6V51.96l30-17.32 30 17.32V86.6L30 103.92zm0-100.4L0 20.84v34.64l30 17.32 30-17.32V20.84L30 3.52z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    color: var(--color-charcoal);
+    overflow-x: hidden;
+}
+
+/* 2. DEKORASI HEXAGON RAKSASA MELAYANG (WATERMARK CIRI KHAS) */
+body::before {
+    content: '';
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    width: 350px;
+    height: 350px;
+    background-color: var(--color-honey);
+    opacity: 0.05;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+    pointer-events: none;
+    animation: spinHoney 40s linear infinite;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -150px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background-color: var(--color-honey-dark);
+    opacity: 0.03;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+    pointer-events: none;
+    animation: spinHoney 60s linear infinite reverse;
+}
+
+@keyframes spinHoney {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 3. EFEK KACA BURAM (GLASSMORPHISM) PADA BACKGROUND PUTIH */
+/* Agar pola sarang lebah tetap terlihat tembus pandang secara estetik */
+.bg-white {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Tipografi Editorial */
+.editorial-font {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.5px;
+}
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+/* Palet Warna & Tombol */
+.bg-warning { background-color: var(--color-honey) !important; }
+.text-warning { color: var(--color-honey) !important; }
+.border-warning { border-color: var(--color-honey) !important; }
+
+.btn-warning {
+    background-color: var(--color-honey);
+    border-color: var(--color-honey);
+    color: var(--color-charcoal);
+    font-weight: 700;
+}
+.btn-warning:hover {
+    background-color: var(--color-honey-dark);
+    border-color: var(--color-honey-dark);
+    color: #ffffff;
+}
+
+.text-dark { color: var(--color-charcoal) !important; }
+.bg-dark { background-color: var(--color-charcoal) !important; }
+.btn-dark {
+    background-color: var(--color-charcoal);
+    border-color: var(--color-charcoal);
+}
+
+/* Garis Aksen Emas Brand */
+.brand-top-stripe {
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-honey) 0%, var(--color-honey-dark) 100%);
+    width: 100%;
+}
+
+/* Highlight Teks */
+.headline-highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.headline-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: rgba(255, 184, 0, 0.45);
+    z-index: -1;
+    transform: rotate(-1deg);
+}
+
+/* Efek Kartu Melayang (Hover Lift) */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08) !important;
+}
+
+/* Background Sarang Lebah Interaktif di Area Hero */
+.hero-section {
+    min-height: 85vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+}
+.honeycomb-bg {
+    position: absolute;
+    top: -10%; right: -5%;
+    width: 60%; height: 120%;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="115" viewBox="0 0 100 115" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 0L93.3013 25V75L50 100L6.69873 75V25L50 0Z" stroke="%23FFB800" stroke-opacity="0.15" stroke-width="2"/></svg>');
+    background-size: 80px;
+    z-index: 0;
+    animation: floatHoney 20s ease-in-out infinite;
+    pointer-events: none;
+}
+@keyframes floatHoney {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Denah Spot Kursi/Gazebo (Moviplex Style) */
+.seat-btn {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+.seat-btn.available {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+    color: var(--color-charcoal);
+}
+.seat-btn.available:hover {
+    border-color: var(--color-honey);
+    background-color: #FFFDF7;
+    transform: scale(1.05);
+}
+.seat-btn.selected {
+    background-color: var(--color-honey) !important;
+    border-color: var(--color-honey-dark) !important;
+    color: var(--color-charcoal) !important;
+    box-shadow: 0 4px 12px rgba(255, 184, 0, 0.4);
+    transform: scale(1.05);
+}
+.seat-btn.booked {
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+    color: #ef4444;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+.seat-btn.disabled {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
+}
+.seat-legend {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Accordion Tata Tertib */
+.accordion-item {
+    border: 1px solid rgba(0,0,0,0.06);
+    margin-bottom: 0.75rem;
+    border-radius: 12px !important;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #FFFDF5;
+    color: var(--color-charcoal);
+    font-weight: 700;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--color-honey);
+}
+
+/* Navigasi Responsif */
+@media (max-width: 991px) {
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .navbar-brand {
+        margin-bottom: 12px;
+    }
+    .overflow-x-auto {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .overflow-x-auto::-webkit-scrollbar {
+        display: none;
+    }
+}
