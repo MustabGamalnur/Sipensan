@@ -5,11 +5,10 @@
     <!-- 1. Hero Section -->
     <section class="hero-section text-center">
         <div class="honeycomb-bg"></div>
-        <div class="container h-100 position-relative" style="z-index: 1;">
-            <div class="row h-100 align-items-center justify-content-center">
+        <div class="container position-relative py-5" style="z-index: 1;">
+            <div class="row align-items-center justify-content-center">
                 
-                <!-- Kolom diperlebar dan diubah ke tengah (text-center) -->
-                <div class="col-lg-9" data-aos="fade-up" data-aos-duration="1000">
+                <div class="col-lg-9 py-4">
                     <span class="badge bg-dark text-warning mb-3 px-4 py-2 fs-6 rounded-pill shadow-sm">
                         <i class="fas fa-bullhorn me-2"></i> Resmi Dibuka untuk Penjengukan 2026
                     </span>
@@ -18,46 +17,54 @@
                         Reservasi <span class="headline-highlight">Penjengukan Santri</span>
                     </h1>
                     
-                    <p class="lead text-muted mb-5 fs-5 mx-auto" style="max-width: 800px;">
+                    <p class="lead text-muted mb-4 fs-5 mx-auto" style="max-width: 780px;">
                         Atur jadwal silaturahmi Anda dengan ananda tercinta. Pilih waktu dan spot kunjungan dengan tertib, teratur, dan nyaman tanpa antre panjang.
                     </p>
                     
-                    <div class="d-flex justify-content-center flex-wrap gap-3">
-                        <a href="#booking-section" class="btn btn-warning btn-lg fw-bold px-4 py-3 text-dark shadow-sm hover-lift">
+                    <div class="d-flex justify-content-center flex-wrap gap-3 pt-2">
+                        <a href="#booking-section" class="btn btn-warning btn-lg fw-bold px-4 py-3 text-dark shadow-sm hover-lift rounded-pill">
                             <i class="fas fa-calendar-check me-2"></i> Pilih Spot Kunjungan Sekarang
                         </a>
-                        <a href="#kalender-jadwal" class="btn btn-outline-dark btn-lg fw-bold px-4 py-3 hover-lift">
+                        <a href="#kalender-jadwal" class="btn btn-outline-dark btn-lg fw-bold px-4 py-3 hover-lift rounded-pill">
                             <i class="fas fa-calendar-alt me-2"></i> Cek Kalender Kunjungan
                         </a>
                     </div>
                 </div>
-
-                <!-- KARTU CEK E-TIKET TELAH DIHAPUS SEPENUHNYA DARI SINI -->
                 
             </div>
         </div>
     </section>
 
-    <!-- 2. Section Kalender Jadwal Khusus Kunjungan -->
-    <section id="kalender-jadwal" class="py-5 bg-white border-top border-bottom">
+    <!-- 2. Section Kalender Jadwal (Kembali Bersih & Cerah) -->
+    <section id="kalender-jadwal" class="py-5" style="background-color: var(--color-bg);">
         <div class="container py-4">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="text-warning fw-bold text-uppercase small tracking-wide">Agenda Pondok</span>
-                <h2 class="fw-bold text-dark editorial-font mt-2">Jadwal & Agenda Kunjungan Santri</h2>
-                <p class="text-muted">Perhatikan status ketersediaan tanggal sebelum merencanakan waktu penjengukan ananda.</p>
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wide shadow-sm">
+                    Agenda Pondok
+                </span>
+                <h2 class="display-6 fw-bold text-dark editorial-font mt-2">Jadwal & Agenda Kunjungan Santri</h2>
+                <p class="text-muted fs-6 mx-auto" style="max-width: 700px;">
+                    Perhatikan status ketersediaan tanggal sebelum merencanakan waktu penjengukan ananda.
+                </p>
             </div>
 
             <!-- Petunjuk Indikator Status -->
-            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4" data-aos="fade-up">
-                <span class="badge bg-success px-3 py-2"><i class="fas fa-check-circle me-1"></i> Dibuka (Bisa Dipesan)</span>
-                <span class="badge bg-danger px-3 py-2"><i class="fas fa-ban me-1"></i> Ditutup (Agenda Santri / PTS / PAS)</span>
-                <span class="badge bg-secondary px-3 py-2"><i class="fas fa-user-lock me-1"></i> Kuota Sesi Penuh</span>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                <span class="badge bg-success px-3 py-2 shadow-sm">
+                    <i class="fas fa-check-circle me-1"></i> Dibuka (Bisa Dipesan)
+                </span>
+                <span class="badge bg-danger px-3 py-2 shadow-sm">
+                    <i class="fas fa-ban me-1"></i> Ditutup (Agenda Santri / PTS / PAS)
+                </span>
+                <span class="badge bg-secondary px-3 py-2 shadow-sm">
+                    <i class="fas fa-user-lock me-1"></i> Kuota Sesi Penuh
+                </span>
             </div>
 
             <!-- Timeline Card Agenda Kunjungan -->
-            <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success hover-lift">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success hover-lift bg-white">
                         <div class="card-body">
                             <span class="text-success fw-bold small"><i class="fas fa-calendar-day me-1"></i> Ahad, 18 Oktober 2026</span>
                             <h5 class="fw-bold text-dark mt-2 mb-1">Penjengukan Rutin Pekan Ke-3</h5>
@@ -68,7 +75,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-danger bg-light hover-lift">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-danger hover-lift bg-white">
                         <div class="card-body">
                             <span class="text-danger fw-bold small"><i class="fas fa-calendar-times me-1"></i> Ahad, 25 Oktober 2026</span>
                             <h5 class="fw-bold text-dark mt-2 mb-1">Kunjungan Ditiadakan</h5>
@@ -79,7 +86,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success hover-lift">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success hover-lift bg-white">
                         <div class="card-body">
                             <span class="text-success fw-bold small"><i class="fas fa-calendar-day me-1"></i> Ahad, 1 November 2026</span>
                             <h5 class="fw-bold text-dark mt-2 mb-1">Penjengukan Awal Bulan</h5>
@@ -93,16 +100,16 @@
     </section>
 
     <!-- 3. Alur Section -->
-    <section id="alur" class="py-5" style="background-color: var(--color-bg);">
+    <section id="alur" class="py-5 bg-white border-top border-bottom">
         <div class="container py-4">
-            <div class="text-center mb-5" data-aos="fade-up">
+            <div class="text-center mb-5">
                 <span class="text-warning fw-bold text-uppercase small tracking-wide">Prosedur Standar</span>
                 <h2 class="fw-bold text-dark editorial-font mt-2">4 Langkah Mudah Berkunjung</h2>
                 <p class="text-muted">Proses yang tertib dan transparan demi kenyamanan bersama di Al Umanaa.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-white rounded-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-user-check"></i></div>
                             <h5 class="fw-bold text-dark">1. Data Santri</h5>
@@ -110,8 +117,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-white rounded-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-calendar-alt"></i></div>
                             <h5 class="fw-bold text-dark">2. Pilih Waktu</h5>
@@ -119,8 +126,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-white rounded-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-map-marker-alt"></i></div>
                             <h5 class="fw-bold text-dark">3. Pilih Spot</h5>
@@ -128,8 +135,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-white rounded-4">
+                <div class="col-md-3">
+                    <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-qrcode"></i></div>
                             <h5 class="fw-bold text-dark">4. Dapatkan E-Tiket</h5>
@@ -141,29 +148,33 @@
         </div>
     </section>
 
-    <!-- 4. Denah & Spot Section (Moviplex Style) -->
-    <section id="booking-section" class="py-5 bg-white border-top border-bottom">
-        <div class="container py-4">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="text-warning fw-bold text-uppercase small tracking-wide">Peta Interaktif</span>
-                <h2 class="fw-bold text-dark editorial-font mt-2">Denah Pemilihan Spot Kunjungan</h2>
-                <p class="text-muted">Klik pada kotak nomor yang tersedia (berwarna putih) untuk memilih tempat berkumpul Anda.</p>
+    <!-- 4. Denah & Spot Section (KINI MEMAKAI BACKGROUND PARALLAX FOTO AL UMANAA) -->
+    <section id="booking-section" class="py-5 spot-parallax-section">
+        <div class="container py-4 position-relative" style="z-index: 2;">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wide shadow-sm">
+                    Peta Interaktif
+                </span>
+                <h2 class="display-6 fw-bold text-white editorial-font mt-2">Denah Pemilihan Spot Kunjungan</h2>
+                <p class="text-white opacity-75 fs-6 mx-auto" style="max-width: 700px;">
+                    Klik pada kotak nomor yang tersedia (berwarna putih) untuk memilih tempat berkumpul Anda.
+                </p>
             </div>
 
             <div class="row">
-                <!-- Sisi Kiri: Grid Denah Spot -->
-                <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="card border-0 shadow-sm p-4 h-100 bg-light rounded-4">
+                <!-- Sisi Kiri: Grid Denah Spot (Card Semi-Transparan Frost Glass) -->
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="card border-0 shadow-lg p-4 h-100 rounded-4 spot-glass-card">
                         
                         <!-- Legenda Kursi/Spot -->
                         <div class="d-flex flex-wrap justify-content-center gap-4 mb-4 pb-3 border-bottom">
                             <div class="d-flex align-items-center">
                                 <div class="seat-legend bg-white border"></div> 
-                                <span class="small ms-2">Tersedia</span>
+                                <span class="small ms-2 text-dark fw-medium">Tersedia</span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="seat-legend bg-warning"></div> 
-                                <span class="small ms-2 fw-bold">Pilihan Anda</span>
+                                <span class="small ms-2 fw-bold text-dark">Pilihan Anda</span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <div class="seat-legend bg-danger opacity-75"></div> 
@@ -217,20 +228,20 @@
                     </div>
                 </div>
 
-                <!-- Sisi Kanan: Panel Rincian / Form Pemesanan -->
-                <div class="col-lg-4" data-aos="fade-left">
-                    <div class="card border-warning shadow-lg h-100 rounded-4">
+                <!-- Sisi Kanan: Panel Rincian Pemesanan -->
+                <div class="col-lg-4">
+                    <div class="card border-warning shadow-lg h-100 rounded-4 spot-glass-card">
                         <div class="card-header bg-warning text-dark py-3">
                             <h5 class="mb-0 fw-bold"><i class="fas fa-clipboard-list me-2"></i> Rincian Kunjungan</h5>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
                             <div class="mb-3">
-                                <label class="form-label text-muted small fw-bold">Pilih Tanggal Kunjungan</label>
-                                <input type="date" class="form-control bg-light border-0" value="2026-10-18">
+                                <label class="form-label text-dark small fw-bold">Pilih Tanggal Kunjungan</label>
+                                <input type="date" class="form-control bg-white border" value="2026-10-18">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label text-muted small fw-bold">Pilih Sesi Waktu</label>
-                                <select class="form-select bg-light border-0">
+                                <label class="form-label text-dark small fw-bold">Pilih Sesi Waktu</label>
+                                <select class="form-select bg-white border">
                                     <option>Sesi Pagi (08:00 - 11:30 WIB)</option>
                                     <option>Sesi Siang (13:00 - 16:30 WIB)</option>
                                 </select>
@@ -251,9 +262,9 @@
                                 <span class="text-success fw-bold small"><i class="fas fa-check-circle"></i> Siap Dipesan</span>
                             </div>
 
-                            <button class="btn btn-dark w-100 fw-bold py-3 mt-auto rounded-3 hover-lift">
+                            <a href="{{ route('login', ['role' => 'wali']) }}" class="btn btn-dark w-100 fw-bold py-3 mt-auto rounded-3 hover-lift text-decoration-none text-center">
                                 Lanjut Konfirmasi Data <i class="fas fa-chevron-right ms-2"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -264,16 +275,15 @@
     <!-- 5. Tata Tertib Section -->
     <section id="tatatertib" class="py-5" style="background-color: var(--color-bg);">
         <div class="container py-4">
-            <div class="text-center mb-5" data-aos="fade-up">
+            <div class="text-center mb-5">
                 <span class="text-warning fw-bold text-uppercase small tracking-wide">Panduan Santun</span>
                 <h2 class="fw-bold text-dark editorial-font mt-2">Tata Tertib & Adab Penjengukan</h2>
                 <p class="text-muted">Demi menjaga kenyamanan dan kekhusyukan lingkungan belajar para santri.</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-9" data-aos="fade-up">
+                <div class="col-lg-9">
                     <div class="accordion" id="accordionTertib">
-                        <!-- Item 1 -->
                         <div class="accordion-item shadow-sm">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#tertib1">
@@ -287,7 +297,6 @@
                             </div>
                         </div>
 
-                        <!-- Item 2 -->
                         <div class="accordion-item shadow-sm">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tertib2">
@@ -301,7 +310,6 @@
                             </div>
                         </div>
 
-                        <!-- Item 3 -->
                         <div class="accordion-item shadow-sm">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tertib3">

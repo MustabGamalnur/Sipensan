@@ -10,13 +10,12 @@
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: var(--color-bg);
-    /* 1. POLA SARANG LEBAH (HONEYCOMB) SEAMLESS & TIPIS */
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='103.92' viewBox='0 0 60 103.92' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffb800' fill-opacity='0.04'%3E%3Cpath d='M30 103.92L0 86.6V51.96l30-17.32 30 17.32V86.6L30 103.92zm0-100.4L0 20.84v34.64l30 17.32 30-17.32V20.84L30 3.52z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     color: var(--color-charcoal);
     overflow-x: hidden;
 }
 
-/* 2. DEKORASI HEXAGON RAKSASA MELAYANG (WATERMARK CIRI KHAS) */
+/* DEKORASI HEXAGON RAKSASA MELAYANG */
 body::before {
     content: '';
     position: fixed;
@@ -52,15 +51,35 @@ body::after {
     100% { transform: rotate(360deg); }
 }
 
-/* 3. EFEK KACA BURAM (GLASSMORPHISM) PADA BACKGROUND PUTIH */
-/* Agar pola sarang lebah tetap terlihat tembus pandang secara estetik */
-.bg-white {
-    background-color: rgba(255, 255, 255, 0.85) !important;
+/* ==========================================================================
+   EFEK PARALLAX KACA TRANSPARAN PADA BAGIAN PETA INTERAKTIF
+   ========================================================================== */
+.spot-parallax-section {
+    position: relative;
+    background-image: 
+        linear-gradient(135deg, rgba(17, 20, 24, 0.78) 0%, rgba(28, 42, 68, 0.72) 100%),
+        url('img/bg-pondok.jpg'),
+        url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-top: 3px solid var(--color-honey);
+    border-bottom: 3px solid var(--color-honey);
+    box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.spot-glass-card {
+    background-color: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
-.card {
-    background-color: rgba(255, 255, 255, 0.95) !important;
+
+/* Navbar */
+.navbar {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    min-height: auto !important;
 }
 
 /* Tipografi Editorial */
@@ -98,7 +117,7 @@ body::after {
 
 /* Garis Aksen Emas Brand */
 .brand-top-stripe {
-    height: 4px;
+    height: 3px;
     background: linear-gradient(90deg, var(--color-honey) 0%, var(--color-honey-dark) 100%);
     width: 100%;
 }
@@ -127,16 +146,16 @@ body::after {
 }
 .hover-lift:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.08) !important;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18) !important;
 }
 
-/* Background Sarang Lebah Interaktif di Area Hero */
+/* Hero Honeycomb Background */
 .hero-section {
-    min-height: 85vh;
+    min-height: auto;
     position: relative;
     overflow: hidden;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 1.2rem !important;
+    padding-bottom: 2.2rem !important;
 }
 .honeycomb-bg {
     position: absolute;
@@ -154,7 +173,7 @@ body::after {
     100% { transform: translateY(0) rotate(0deg); }
 }
 
-/* Denah Spot Kursi/Gazebo (Moviplex Style) */
+/* Denah Kursi/Spot */
 .seat-btn {
     width: 100%;
     padding: 12px 0;
@@ -208,7 +227,7 @@ body::after {
     margin-bottom: 0.75rem;
     border-radius: 12px !important;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: #ffffff !important;
 }
 .accordion-button:not(.collapsed) {
     background-color: #FFFDF5;
@@ -219,23 +238,4 @@ body::after {
 .accordion-button:focus {
     box-shadow: none;
     border-color: var(--color-honey);
-}
-
-/* Navigasi Responsif */
-@media (max-width: 991px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start !important;
-    }
-    .navbar-brand {
-        margin-bottom: 12px;
-    }
-    .overflow-x-auto {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-    .overflow-x-auto::-webkit-scrollbar {
-        display: none;
-    }
 }
