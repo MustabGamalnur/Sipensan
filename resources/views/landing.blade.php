@@ -9,19 +9,19 @@
             <div class="row align-items-center justify-content-center">
                 
                 <div class="col-lg-9 py-4">
-                    <span class="badge bg-dark text-warning mb-3 px-4 py-2 fs-6 rounded-pill shadow-sm">
+                    <span class="badge bg-dark text-warning mb-3 px-4 py-2 fs-6 rounded-pill shadow-sm" data-aos="fade-down" data-aos-duration="600">
                         <i class="fas fa-bullhorn me-2"></i> Resmi Dibuka untuk Penjengukan 2026
                     </span>
                     
-                    <h1 class="display-3 fw-bold text-dark mb-4 editorial-font">
+                    <h1 class="display-3 fw-bold text-dark mb-4 editorial-font" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
                         Reservasi <span class="headline-highlight">Penjengukan Santri</span>
                     </h1>
                     
-                    <p class="lead text-muted mb-4 fs-5 mx-auto" style="max-width: 780px;">
+                    <p class="lead text-muted mb-4 fs-5 mx-auto" style="max-width: 780px;" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
                         Atur jadwal silaturahmi Anda dengan ananda tercinta. Pilih waktu dan spot kunjungan dengan tertib, teratur, dan nyaman tanpa antre panjang.
                     </p>
                     
-                    <div class="d-flex justify-content-center flex-wrap gap-3 pt-2">
+                    <div class="d-flex justify-content-center flex-wrap gap-3 pt-2" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
                         <a href="#booking-section" class="btn btn-warning btn-lg fw-bold px-4 py-3 text-dark shadow-sm hover-lift rounded-pill">
                             <i class="fas fa-calendar-check me-2"></i> Pilih Spot Kunjungan Sekarang
                         </a>
@@ -35,10 +35,10 @@
         </div>
     </section>
 
-    <!-- 2. Section Kalender Jadwal (Kembali Bersih & Cerah) -->
+    <!-- 2. Section Kalender Jadwal -->
     <section id="kalender-jadwal" class="py-5" style="background-color: var(--color-bg);">
         <div class="container py-4">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-warning text-dark fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wide shadow-sm">
                     Agenda Pondok
                 </span>
@@ -49,7 +49,7 @@
             </div>
 
             <!-- Petunjuk Indikator Status -->
-            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-4" data-aos="fade-up" data-aos-delay="100">
                 <span class="badge bg-success px-3 py-2 shadow-sm">
                     <i class="fas fa-check-circle me-1"></i> Dibuka (Bisa Dipesan)
                 </span>
@@ -63,7 +63,7 @@
 
             <!-- Timeline Card Agenda Kunjungan -->
             <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success hover-lift bg-white">
                         <div class="card-body">
                             <span class="text-success fw-bold small"><i class="fas fa-calendar-day me-1"></i> Ahad, 18 Oktober 2026</span>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-danger hover-lift bg-white">
                         <div class="card-body">
                             <span class="text-danger fw-bold small"><i class="fas fa-calendar-times me-1"></i> Ahad, 25 Oktober 2026</span>
@@ -85,7 +85,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="350">
                     <div class="card h-100 border-0 shadow-sm rounded-4 p-3 border-start border-4 border-success hover-lift bg-white">
                         <div class="card-body">
                             <span class="text-success fw-bold small"><i class="fas fa-calendar-day me-1"></i> Ahad, 1 November 2026</span>
@@ -102,13 +102,13 @@
     <!-- 3. Alur Section -->
     <section id="alur" class="py-5 bg-white border-top border-bottom">
         <div class="container py-4">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <span class="text-warning fw-bold text-uppercase small tracking-wide">Prosedur Standar</span>
                 <h2 class="fw-bold text-dark editorial-font mt-2">4 Langkah Mudah Berkunjung</h2>
                 <p class="text-muted">Proses yang tertib dan transparan demi kenyamanan bersama di Al Umanaa.</p>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-user-check"></i></div>
@@ -117,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-calendar-alt"></i></div>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-map-marker-alt"></i></div>
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
                     <div class="card h-100 border-0 shadow-sm p-3 hover-lift text-center bg-light rounded-4">
                         <div class="card-body">
                             <div class="display-5 text-warning mb-3"><i class="fas fa-qrcode"></i></div>
@@ -148,10 +148,10 @@
         </div>
     </section>
 
-    <!-- 4. Denah & Spot Section (KINI MEMAKAI BACKGROUND PARALLAX FOTO AL UMANAA) -->
+    <!-- 4. Denah & Spot Section (Parallax Foto Al Umanaa) -->
     <section id="booking-section" class="py-5 spot-parallax-section">
         <div class="container py-4 position-relative" style="z-index: 2;">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <span class="badge bg-warning text-dark fw-bold text-uppercase px-3 py-2 rounded-pill mb-2 tracking-wide shadow-sm">
                     Peta Interaktif
                 </span>
@@ -162,8 +162,8 @@
             </div>
 
             <div class="row">
-                <!-- Sisi Kiri: Grid Denah Spot (Card Semi-Transparan Frost Glass) -->
-                <div class="col-lg-8 mb-4 mb-lg-0">
+                <!-- Sisi Kiri: Grid Denah Spot -->
+                <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="100">
                     <div class="card border-0 shadow-lg p-4 h-100 rounded-4 spot-glass-card">
                         
                         <!-- Legenda Kursi/Spot -->
@@ -229,7 +229,7 @@
                 </div>
 
                 <!-- Sisi Kanan: Panel Rincian Pemesanan -->
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="200">
                     <div class="card border-warning shadow-lg h-100 rounded-4 spot-glass-card">
                         <div class="card-header bg-warning text-dark py-3">
                             <h5 class="mb-0 fw-bold"><i class="fas fa-clipboard-list me-2"></i> Rincian Kunjungan</h5>
@@ -275,14 +275,14 @@
     <!-- 5. Tata Tertib Section -->
     <section id="tatatertib" class="py-5" style="background-color: var(--color-bg);">
         <div class="container py-4">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5" data-aos="fade-up">
                 <span class="text-warning fw-bold text-uppercase small tracking-wide">Panduan Santun</span>
                 <h2 class="fw-bold text-dark editorial-font mt-2">Tata Tertib & Adab Penjengukan</h2>
                 <p class="text-muted">Demi menjaga kenyamanan dan kekhusyukan lingkungan belajar para santri.</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-9" data-aos="fade-up" data-aos-delay="150">
                     <div class="accordion" id="accordionTertib">
                         <div class="accordion-item shadow-sm">
                             <h2 class="accordion-header">
