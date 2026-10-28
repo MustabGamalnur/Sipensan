@@ -30,11 +30,10 @@
             background-color: #D97706;
             color: #ffffff;
         }
-        /* Penataan centering yang aman dari kepotong di layar mana pun */
         .login-container-safe {
             width: 100%;
             max-width: 480px;
-            margin: auto; /* Aman: otomatis di tengah, tidak akan pernah memotong header atas */
+            margin: auto;
             padding: 3.5rem 1.25rem;
         }
     </style>
@@ -43,32 +42,33 @@
     
     <div class="login-container-safe">
         
+        @php
+            // Mendeteksi role yang dipilih dari parameter URL atau nilai old session
+            $roleSelected = old('expected_role', request()->query('role', 'wali'));
+            
+            $defaultEmail = match($roleSelected) {
+                'admin'   => 'admin@alumanaa.sch.id',
+                'petugas' => 'petugas@alumanaa.sch.id',
+                default   => 'wali@alumanaa.sch.id',
+            };
+            $defaultPass = match($roleSelected) {
+                'admin'   => 'admin123',
+                'petugas' => 'petugas123',
+                default   => 'wali123',
+            };
+            $badgeRole = match($roleSelected) {
+                'admin'   => ['class' => 'bg-red-lt text-danger', 'label' => 'Akses Admin Kesantrian'],
+                'petugas' => ['class' => 'bg-blue-lt text-primary', 'label' => 'Akses Petugas Gerbang (Guide)'],
+                default   => ['class' => 'bg-green-lt text-success', 'label' => 'Akses Wali Santri'],
+            };
+        @endphp
+
         <!-- Logo & Brand Header -->
         <div class="text-center mb-4">
             <a href="{{ url('/') }}" class="navbar-brand navbar-brand-autodark d-inline-block">
                 <img src="{{ asset('img/Logo Al Umanaa.png') }}" height="68" alt="Logo Al Umanaa" style="object-fit: contain;" onerror="this.src='https://via.placeholder.com/150x50?text=Al+Umanaa'">
             </a>
             <h2 class="h3 mt-3 text-dark fw-bold mb-1">Portal Layanan Penjengukan</h2>
-            
-            @php
-                $roleSelected = request()->query('role', 'wali');
-                $defaultEmail = match($roleSelected) {
-                    'admin'   => 'admin@alumanaa.sch.id',
-                    'petugas' => 'petugas@alumanaa.sch.id',
-                    default   => 'wali@alumanaa.sch.id',
-                };
-                $defaultPass = match($roleSelected) {
-                    'admin'   => 'admin123',
-                    'petugas' => 'petugas123',
-                    default   => 'wali123',
-                };
-                $badgeRole = match($roleSelected) {
-                    'admin'   => ['class' => 'bg-red-lt text-danger', 'label' => 'Akses Admin Kesantrian'],
-                    'petugas' => ['class' => 'bg-blue-lt text-primary', 'label' => 'Akses Petugas Gerbang (Guide)'],
-                    default   => ['class' => 'bg-green-lt text-success', 'label' => 'Akses Wali Santri'],
-                };
-            @endphp
-
             <span class="badge {{ $badgeRole['class'] }} px-3 py-1 mt-2">
                 {{ $badgeRole['label'] }}
             </span>
@@ -93,6 +93,9 @@
 
                 <form method="POST" action="{{ url('/login') }}" autocomplete="off">
                     @csrf
+                    <!-- Hidden Input Pembawa Peran Portal Terpilih -->
+                    <input type="hidden" name="expected_role" value="{{ $roleSelected }}">
+
                     <div class="mb-3">
                         <label class="form-label required fw-medium">Alamat Email</label>
                         <input type="email" name="email" class="form-control" placeholder="nama@alumanaa.sch.id" required value="{{ old('email', $defaultEmail) }}">

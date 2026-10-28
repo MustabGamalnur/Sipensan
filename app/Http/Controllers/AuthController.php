@@ -26,15 +26,43 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email'    => ['required', 'email'],
-            'password' => ['required'],
+            'email'         => ['required', 'email'],
+            'password'      => ['required'],
+            'expected_role' => ['nullable', 'string', 'in:admin,petugas,wali'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        $attemptData = [
+            'email'    => $credentials['email'],
+            'password' => $credentials['password'],
+        ];
+
+        if (Auth::attempt($attemptData)) {
             $request->session()->regenerate();
 
+            $userRole = Auth::user()->role;
+            $expectedRole = $request->input('expected_role');
+
+            // Cek apakah akun yang login sesuai dengan pintu peran yang dipilih
+            if ($expectedRole && $userRole !== $expectedRole) {
+                Auth::logout();
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();
+
+                $roleLabels = [
+                    'admin'   => 'Admin Kesantrian',
+                    'petugas' => 'Petugas Gerbang (Guide)',
+                    'wali'    => 'Wali Santri',
+                ];
+
+                $portalName = $roleLabels[$expectedRole] ?? strtoupper($expectedRole);
+
+                return back()
+                    ->withErrors(['email' => "Akses Ditolak! Akun Anda tidak memiliki hak akses pada portal {$portalName}."])
+                    ->withInput($request->only('email', 'expected_role'));
+            }
+
             // Arahkan dashboard sesuai role akun
-            return match (Auth::user()->role) {
+            return match ($userRole) {
                 'admin'   => redirect()->intended('/admin/dashboard'),
                 'petugas' => redirect()->intended('/petugas/dashboard'),
                 'wali'    => redirect()->intended('/wali/dashboard'),
